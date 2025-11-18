@@ -1,0 +1,136 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Stack Sans Notch", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+body{
+    color: white;
+    background: rgb(29, 29, 29);
+}
+
+.hero{ 
+       min-height: 100vh;
+       padding: 50px 300px;
+       margin-top: 102px;
+}
+
+
+
+h1 {width: 46vw;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease forwards;
+    
+}
+
+.Shlogan {
+    font-size: 19px;
+    width: 44vw;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    color: #9ba3b4;
+    animation: fadeIn 1.3s ease forwards;
+}
+
+.Get {width: 40vw;
+    display: flex;
+    gap: 10px;
+    
+}
+
+.Get input {
+    flex: 1;
+    padding: 14px 16px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #30363d;
+    background-color: white;
+    color: #343638;
+    outline: none;
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+
+
+
+.Get input:hover{
+    border-color: #0376fa;
+    transform: scale(1.03);
+}
+
+.Get button {
+    padding: 14px 22px;
+    background-color: #238636;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.Get button:hover {
+    background-color: #2ea043;
+    box-shadow: 0 0 10px #2ea043;           
+    transform: scale(1.07);
+}
+
+
+
+
+
+
+/* 2. Mobile Screen Adjustments (For screens smaller than 550px) */
+@media (max-width: 550px) {
+    .hero {
+        /* Further reduce padding for mobile */
+        padding: 60px 15px; 
+    }
+    h1 {
+        font-size: 36px;
+        /* Ensure it doesn't try to occupy too small a width */
+        width: auto;
+        max-width: 100%;
+    }
+    .Shlogan {
+        font-size: 14px;
+        width: auto;
+        max-width: 100%;
+    }
+    
+    /* Stack the Input and Button vertically */
+    .Get { flex-direction:row;
+           gap:8px;
+           max-width: 50%; 
+    }
+
+    /* Make both input and button take full width */
+    .Get input{
+        
+        transform: none; /* Remove transform hover effect on mobile for better touch experience */
+    }
+    .Get button {
+        font-size: small;
+        width: 50%;
+        transform: none; /* Remove transform hover effect on mobile for better touch experience */
+    }
+    
+    /* Remove hover shadow on mobile button */
+    .Get button:hover {
+        box-shadow: none;
+        background-color: #238636;
+    }
+}
+
+/* Hero animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
