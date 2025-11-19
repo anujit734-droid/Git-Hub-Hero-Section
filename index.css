@@ -87,15 +87,12 @@ h1 {width: 46vw;
 
 
 
-/* 2. Mobile Screen Adjustments (For screens smaller than 550px) */
 @media (max-width: 550px) {
     .hero {
-        /* Further reduce padding for mobile */
         padding: 60px 15px; 
     }
     h1 {
         font-size: 36px;
-        /* Ensure it doesn't try to occupy too small a width */
         width: auto;
         max-width: 100%;
     }
@@ -105,32 +102,31 @@ h1 {width: 46vw;
         max-width: 100%;
     }
     
-    /* Stack the Input and Button vertically */
+    
     .Get { flex-direction:row;
            gap:8px;
            max-width: 50%; 
     }
 
-    /* Make both input and button take full width */
+    
     .Get input{
         
-        transform: none; /* Remove transform hover effect on mobile for better touch experience */
+        transform: none; 
     }
     .Get button {
         font-size: small;
         width: 50%;
-        transform: none; /* Remove transform hover effect on mobile for better touch experience */
+        transform: none; 
     }
     
-    /* Remove hover shadow on mobile button */
     .Get button:hover {
         box-shadow: none;
         background-color: #238636;
     }
 }
 
-/* Hero animation */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
+
 }
